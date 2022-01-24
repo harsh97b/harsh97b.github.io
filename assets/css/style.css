@@ -1,188 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-/* font-family: 'Montserrat', sans-serif; */
-body{
-    background-color: rgb(243, 237, 230);
-    font-family: 'Varela Round', sans-serif;
-}
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-nav{
-    font-family: 'Varela Round', sans-serif;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
 }
-nav ul{
+
+main {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+footer {
+    height: 30vh;
+    background-color: #ffffff;
+}
+
+.row {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    list-style-type: none;
-    height: 50px;
-    background-color: rgb(30, 4, 56);
-    color: white;
+    width: 100%;
+    max-width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
-nav ul li{
-    padding: 0 12px;
+
+.col-logo {
+    flex: 0 0 50%;
+    text-align: left;
 }
-.profilePic{
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
+
+.col-form {
+    flex: 0 0 40%;
+    text-align: center;
 }
-.profilePic img{
-    width: 35px;
-    border-radius: 40%;
-    padding: 0 8px;
+
+.col-logo img {
+    max-width: 300px;
 }
-.btn{
-    background-color: rgb(47, 18, 78);
-    color: rgb(228, 217, 240);
-    padding: 7px 7px;
-    border-radius: 5px;
+
+.col-logo h2 {
+    font: 26px;
+    font-weight: 400;
+    padding: 0 30px;
+    line-height: 32px;
+}
+
+.col-form .form-container {
+    background-color: #ffffff;
     border: none;
-    cursor: pointer;
-}
-.btn:hover{
-    background-color: rgb(71, 48, 95);
-}
-#btnHome{
-    background-color: rgb(30, 4, 56);
-    color: white;
-}
-#btnHome:hover{
-    color: rgb(156, 128, 185);
-}
-section{
-    display: flex;
-}
-.frame-container{
-    background-color: rgb(209, 204, 230);
-    min-height: 35vh;
-    border-radius: 12px;
-    /* min-width: 80vw; */
-    width: 90%;
-    display: flex;
-    margin: 12px auto;
-    /* margin: 12px 0; */
-    align-items: center;
-    justify-content: center;
-}
-.image{
-    width: 25vw;
-    height: 75%;
-    margin: auto;
-    border-radius: 7px;
-    display: none;
-}
-.background-front{
-    background: url(../images/background-front.jpg);
-    background-size: cover;
-    color: white;
-    height: 75%;
-    margin: auto;
-    border-radius: 7px;
-    /* background-size: cover; */
-    width: 80%;
-    -webkit-filter: blur(0.5px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* flex-flow: row wrap; */
-
-}
-.content{
-    background-color: rgb(250, 248, 243);
-    min-height: 47vh;
     border-radius: 8px;
-    margin: 8px auto;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    /* height: 1200px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 400px;
 }
-.inner-content{
-    margin: 12px;
-    width: 97%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+
+.col-form .form-container input, .col-form .form-container .btn-login {
+    width: 100%;
+    margin: 5px 0;
+    height: 45px;
+    vertical-align: middle;
+    font-size: 16px;
 }
-.name{
-    font-family: 'Varela Round', sans-serif;
+
+.col-form .form-container input {
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    padding: 0 8px;
+    outline: none;
 }
-.desc{
-    font-family: 'Montserrat', sans-serif;
+
+.col-form .form-container input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
 }
-.text-content-title{
-    margin: 4px 0;
-}
-.text-content{
+
+.col-form .form-container .btn-login {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
     font-size: 20px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-weight: 700;
 }
 
-footer{
-    background-color: rgb(30, 4, 56);
-    height: 6vh;
-    color: white;
-    position: sticky;
-}
-#first{
-    display: none;
-}
-#second{
-    display: none;
-}
-#third{
-    display: none;
+.col-form .form-container a {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #dadde1;
 }
 
-
-
-
-@media only screen and (max-width: 600px){
-    .name{
-        font-size: 15px;
-    }
-    .desc{
-        font-size: 20px;
-    }
-    #knowMoreBtn{
-        font-size: 13px;
-    }
-    .text-content{
-        font-size: 17px;
-    }
+.col-form .form-container a:hover {
+    text-decoration: underline;
 }
-@media only screen and (max-width: 500px){
-    .name{
-        font-size: 12px;
-    }
-    .desc{
-        font-size: 17px;
-    }
-    #knowMoreBtn{
-        font-size: 11px;
-    }
-    .text-content{
-        font-size: 14px;
-    }
+
+.col-form .form-container .btn-new {
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
 }
-@media only screen and (max-width: 400px) {
-    nav ul li {
-        padding: 0 4px;
-    }
-    .name{
-        font-size: 9px;
-    }
-    .desc{
-        font-size: 13px;
-    }
-    #knowMoreBtn{
-        font-size: 8px;
-    }
-    .text-content{
-        font-size: 13px;
-    }
+
+.col-form p {
+    font-size: 14px;
+}
+
+.col-form p a {
+    text-decoration: none;
+    color: #1c1e21;
+    font-weight: 600;
+}
+
+.col-form p a:hover {
+    text-decoration: underline;
+}
+
+.footer-contents {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+footer ol:first-child {
+    border-bottom: 1px solid #dddfe2;
+}
+
+footer ol:first-child li:last-child button {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+footer ol li {
+    padding-right: 15px;
+    font-size: 12px;
+    color: #385898;
+}
+
+footer ol li a {
+    text-decoration: none;
+    color: #385898;
+}
+
+footer ol li a:hover {
+    text-decoration: underline;
+}
+
+footer small {
+    font-size: 11px;
 }
